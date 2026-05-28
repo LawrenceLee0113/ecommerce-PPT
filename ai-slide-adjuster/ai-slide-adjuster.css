@@ -1,0 +1,442 @@
+.asa-root {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483000;
+  pointer-events: none;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.asa-toolbar,
+.asa-panel,
+.asa-ghost,
+.asa-relations,
+.asa-guard-modal,
+.asa-toast {
+  pointer-events: auto;
+}
+
+.asa-toolbar {
+  position: fixed;
+  z-index: 20;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px;
+  border: 1px solid rgba(15, 23, 42, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 18px 50px rgba(15, 23, 42, 0.18);
+  backdrop-filter: blur(10px);
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+
+.asa-toolbar.is-dragging {
+  cursor: grabbing;
+}
+
+.asa-button {
+  min-width: 34px;
+  width: 34px;
+  height: 34px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  border-radius: 6px;
+  background: #ffffff;
+  color: #0f172a;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.asa-icon {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.asa-button:hover {
+  border-color: rgba(37, 99, 235, 0.45);
+  background: #eff6ff;
+}
+
+.asa-button[aria-pressed="true"] {
+  border-color: #2563eb;
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.asa-button-copy {
+  padding-inline: 0;
+}
+
+.asa-panel {
+  position: fixed;
+  left: -10000px;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  border: 1px solid rgba(15, 23, 42, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 60px rgba(15, 23, 42, 0.18);
+  color: #0f172a;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.asa-panel-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.1);
+}
+
+.asa-panel-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.asa-panel-status {
+  color: #475569;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.asa-panel-body {
+  display: grid;
+  gap: 10px;
+  padding: 12px 14px 14px;
+}
+
+.asa-field {
+  display: grid;
+  gap: 5px;
+}
+
+.asa-field label {
+  color: #475569;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.asa-field textarea,
+.asa-field input {
+  width: 100%;
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  border-radius: 6px;
+  padding: 8px 9px;
+  color: #0f172a;
+  font: inherit;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.asa-field textarea {
+  min-height: 78px;
+  resize: vertical;
+}
+
+.asa-code {
+  display: grid;
+  gap: 3px;
+  border-radius: 6px;
+  padding: 9px;
+  background: #f8fafc;
+  color: #334155;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 11px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.asa-selection,
+.asa-ghost,
+.asa-hover-highlight,
+.asa-relation-original,
+.asa-relation-target {
+  position: fixed;
+  border: 2px solid #2563eb;
+  border-radius: 4px;
+  box-shadow: 0 0 0 9999px rgba(15, 23, 42, 0.03);
+}
+
+.asa-selection {
+  pointer-events: none;
+  background: rgba(37, 99, 235, 0.04);
+}
+
+.asa-hover-highlight {
+  pointer-events: none;
+  border-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.14);
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.18);
+}
+
+.asa-relations {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+.asa-relation-original {
+  pointer-events: none;
+  border-color: rgba(71, 85, 105, 0.8);
+  border-style: dashed;
+  background: rgba(148, 163, 184, 0.1);
+  box-shadow: none;
+}
+
+.asa-relation-target {
+  pointer-events: auto;
+  border-color: var(--asa-relation-color, #2563eb);
+  background: color-mix(in srgb, var(--asa-relation-color, #2563eb) 15%, transparent);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.78);
+  cursor: move;
+  z-index: 3;
+}
+
+.asa-relation-target.is-active {
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--asa-relation-color, #2563eb) 28%, transparent);
+}
+
+.asa-relation-arrow {
+  position: fixed;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--asa-relation-color, #2563eb);
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.asa-relation-arrow svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.asa-relation-arrow line {
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+.asa-relation-arrow path {
+  fill: currentColor;
+}
+
+.asa-relation-actions {
+  position: fixed;
+  left: var(--asa-actions-left, 50%);
+  top: var(--asa-actions-top, 50%);
+  width: var(--asa-actions-width, 84px);
+  height: 32px;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 140ms ease;
+  z-index: 5;
+}
+
+.asa-relation-action {
+  position: absolute;
+  top: 50%;
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  transform: translateY(-50%);
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  color: #0f172a;
+  cursor: pointer;
+  opacity: 1;
+  transition: color 140ms ease, opacity 140ms ease, transform 140ms ease;
+}
+
+.asa-relation-action .asa-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.asa-relation-action:hover,
+.asa-relation-action:focus-visible {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.16);
+}
+
+.asa-relation-action-copy:hover,
+.asa-relation-action-copy:focus-visible {
+  color: #2563eb;
+}
+
+.asa-relation-action-copy {
+  left: 0;
+}
+
+.asa-relation-action-delete {
+  right: 0;
+  color: #dc2626;
+}
+
+.asa-relation-action-delete:hover,
+.asa-relation-action-delete:focus-visible {
+  color: #b91c1c;
+}
+
+.asa-ghost {
+  display: none;
+  background: rgba(37, 99, 235, 0.14);
+  cursor: move;
+}
+
+.asa-ghost.is-visible {
+  display: block;
+}
+
+.asa-resize {
+  position: absolute;
+  right: -7px;
+  bottom: -7px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  background: #2563eb;
+  cursor: nwse-resize;
+}
+
+.asa-measure {
+  position: absolute;
+  left: 0;
+  top: -27px;
+  padding: 4px 7px;
+  border-radius: 5px;
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.asa-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  border-radius: 7px;
+  padding: 9px 12px;
+  background: #0f172a;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 800;
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.asa-toast.is-visible {
+  opacity: 1;
+}
+
+.asa-guard-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  place-items: center;
+  background: rgba(15, 23, 42, 0.28);
+  pointer-events: auto;
+}
+
+.asa-root.is-guard-open .asa-guard-modal {
+  display: grid;
+}
+
+.asa-guard-card {
+  width: min(420px, calc(100vw - 32px));
+  border: 1px solid rgba(15, 23, 42, 0.16);
+  border-radius: 8px;
+  padding: 18px;
+  background: #ffffff;
+  box-shadow: 0 22px 70px rgba(15, 23, 42, 0.28);
+  color: #0f172a;
+}
+
+.asa-guard-title {
+  margin: 0 0 7px;
+  color: #0f172a;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.asa-guard-copy {
+  margin: 0;
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.asa-guard-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.asa-button-text {
+  border: 1px solid rgba(15, 23, 42, 0.14);
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: #ffffff;
+  color: #0f172a;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.asa-button-text:hover {
+  border-color: rgba(37, 99, 235, 0.45);
+  background: #eff6ff;
+}
+
+.asa-root.is-disabled .asa-panel,
+.asa-root.is-disabled .asa-selection,
+.asa-root.is-disabled .asa-hover-highlight,
+.asa-root.is-disabled .asa-relations,
+.asa-root.is-disabled .asa-ghost {
+  display: none;
+}
+
+.asa-root.is-toolbar-hidden .asa-toolbar {
+  display: none;
+}
+
+.asa-root.is-toolbar-hidden .asa-selection,
+.asa-root.is-toolbar-hidden .asa-hover-highlight,
+.asa-root.is-toolbar-hidden .asa-relations,
+.asa-root.is-toolbar-hidden .asa-ghost {
+  display: none;
+}
+
+@media print {
+  .asa-root {
+    display: none !important;
+  }
+}
