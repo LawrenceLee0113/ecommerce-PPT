@@ -623,7 +623,7 @@ figcaption {
 }
 
 .dot.future {
-  right: 88px;
+  right: 93px;
   top: 36px;
   background: #dfe9df;
   color: #3f3f3e;
@@ -745,9 +745,9 @@ figcaption {
 
 .product-card-grid {
   position: absolute;
-  left: 88px;
-  right: 88px;
-  top: 370px;
+  left: 90px;
+  right: 86px;
+  top: 329px;
   bottom: 118px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
