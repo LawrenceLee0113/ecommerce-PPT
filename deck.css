@@ -505,6 +505,28 @@ figcaption {
   background: #f7f7f2;
 }
 
+.slide[data-slide-id="slide-08"] .persona-box {
+  margin-top: 30px;
+  padding: 26px 40px;
+}
+
+.slide[data-slide-id="slide-08"] .line-list {
+  margin-top: 34px;
+}
+
+.slide[data-slide-id="slide-08"] .line-list.four.compact article {
+  min-height: 132px;
+  padding: 18px 18px;
+}
+
+.slide[data-slide-id="slide-08"] .line-list.four.compact h3 {
+  font-size: 27px;
+}
+
+.slide[data-slide-id="slide-08"] .line-list.four.compact p {
+  font-size: 20px;
+}
+
 .position-map {
   position: absolute;
   left: 88px;
