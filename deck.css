@@ -369,6 +369,39 @@ strong {
   border-top: 1px solid #5f5c5b;
 }
 
+.category-copy {
+  position: absolute;
+  left: 88px;
+  top: 296px;
+  width: 570px;
+}
+
+.category-copy h3 {
+  margin-top: 32px;
+  font-size: 34px;
+}
+
+.category-copy p + p {
+  margin-top: 22px;
+}
+
+.category-image {
+  position: absolute;
+  right: 88px;
+  top: 286px;
+  width: 760px;
+  height: 430px;
+  border: 1px solid #5f5c5b;
+}
+
+.category-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 22px;
+  background: #f7f7f2;
+}
+
 .case-images {
   position: absolute;
   right: 72px;
@@ -588,6 +621,36 @@ figcaption {
   bottom: 92px;
   background: #5e7a68;
   color: #f7f7f2;
+}
+
+.dot.future {
+  right: 88px;
+  top: 36px;
+  background: #dfe9df;
+  color: #3f3f3e;
+}
+
+.future-arrow {
+  position: absolute;
+  right: 175px;
+  top: 92px;
+  width: 1px;
+  height: 230px;
+  background: #5e7a68;
+  transform: rotate(0deg);
+  transform-origin: bottom center;
+}
+
+.future-arrow::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: -8px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 10px solid #5e7a68;
 }
 
 .statement {
