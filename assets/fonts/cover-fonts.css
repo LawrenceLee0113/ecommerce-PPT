@@ -1,0 +1,100 @@
+/* Cover font previews. Files are text-subset webfonts for the cover copy. */
+
+@page {
+  size: 16in 9in;
+  margin: 0;
+}
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .deck .slide:last-of-type {
+    break-after: auto;
+    page-break-after: auto;
+  }
+}
+
+@font-face {
+  font-family: 'Chiron Sung HK Cover';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('./chiron-sung-hk-300.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Chiron Sung HK Cover';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./chiron-sung-hk-400.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'LXGW WenKai TC Cover';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('./lxgw-wenkai-tc-300.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'LXGW WenKai TC Cover';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./lxgw-wenkai-tc-400.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans TC Cover';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('./ibm-plex-sans-tc-300.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'IBM Plex Sans TC Cover';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./ibm-plex-sans-tc-400.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans TC Cover';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('./noto-sans-tc-300.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Sans TC Cover';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./noto-sans-tc-400.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Serif TC Cover';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('./noto-serif-tc-300.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Noto Serif TC Cover';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./noto-serif-tc-400.ttf') format('truetype');
+}

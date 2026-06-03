@@ -16,6 +16,35 @@ body {
   font-family: "Noto Sans TC", "Microsoft JhengHei", "Helvetica Neue", Arial, sans-serif;
 }
 
+html[data-cover-font="noto-serif"] .cover-slide {
+  --cover-preview-font: "Noto Serif TC Cover", "Noto Serif TC", serif;
+}
+
+html[data-cover-font="chiron-sung"] .cover-slide {
+  --cover-preview-font: "Chiron Sung HK Cover", "Noto Serif TC", serif;
+}
+
+html[data-cover-font="ibm-plex"] .cover-slide {
+  --cover-preview-font: "IBM Plex Sans TC Cover", "Noto Sans TC", sans-serif;
+}
+
+html[data-cover-font="noto-sans"] .cover-slide {
+  --cover-preview-font: "Noto Sans TC Cover", "Noto Sans TC", sans-serif;
+}
+
+html[data-cover-font="lxgw-wenkai"] .cover-slide {
+  --cover-preview-font: "LXGW WenKai TC Cover", "Noto Sans TC", sans-serif;
+}
+
+html[data-cover-font] .cover-slide .cover-content,
+html[data-cover-font] .cover-slide .footer {
+  font-family: var(--cover-preview-font);
+}
+
+html[data-preview="clean"] .deck-controls {
+  display: none;
+}
+
 .deck {
   position: fixed;
   left: 50%;
