@@ -748,17 +748,18 @@ figcaption {
   left: 90px;
   right: 86px;
   top: 329px;
-  bottom: 118px;
+  bottom: 96px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid #5f5c5b;
-  border-left: 1px solid #5f5c5b;
+  border: 1px solid #5f5c5b;
 }
 
 .product-card-grid article {
   padding: 20px 22px 24px;
-  border-right: 1px solid #5f5c5b;
-  border-bottom: 1px solid #5f5c5b;
+}
+
+.product-card-grid article + article {
+  border-left: 1px solid #5f5c5b;
 }
 
 .product-card-grid figure {
