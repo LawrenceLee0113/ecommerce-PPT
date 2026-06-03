@@ -308,6 +308,47 @@ img {
   border-right: 1px solid #5f5c5b;
 }
 
+.slide[data-slide-id="slide-14"] .side-image {
+  left: 88px;
+  top: 252px;
+  width: 980px;
+  bottom: 96px;
+  border: 1px solid #5f5c5b;
+  background: #f7f7f2;
+}
+
+.slide[data-slide-id="slide-14"] .side-image img {
+  object-fit: contain;
+  padding: 6px;
+  filter: none;
+}
+
+.slide[data-slide-id="slide-14"] .text-panel {
+  right: 88px;
+  top: 286px;
+  width: 350px;
+  bottom: 126px;
+  padding: 0;
+}
+
+.slide[data-slide-id="slide-14"] .line-list {
+  margin-top: 0;
+}
+
+.slide[data-slide-id="slide-14"] .line-list article {
+  padding: 22px 0;
+}
+
+.slide[data-slide-id="slide-14"] .line-list span {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.slide[data-slide-id="slide-14"] .line-list p {
+  font-size: 19px;
+  line-height: 1.32;
+}
+
 .line-list.four.compact article:last-child {
   border-right: 0;
 }
