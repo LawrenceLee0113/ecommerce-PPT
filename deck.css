@@ -200,14 +200,14 @@ img {
 
 .cover-subtitle {
   position: absolute;
-  right: 84px;
+  left: 84px;
   bottom: 180px;
   width: 560px;
   color: #3f3f3e;
   font-size: 25px;
   font-weight: 300;
   line-height: 1.35;
-  text-align: right;
+  text-align: left;
 }
 
 .pill-row {
@@ -218,9 +218,9 @@ img {
 
 .cover-tags {
   position: absolute;
-  right: 84px;
+  left: 84px;
   bottom: 104px;
-  justify-content: flex-end;
+  justify-content: flex-start;
   max-width: 600px;
 }
 
