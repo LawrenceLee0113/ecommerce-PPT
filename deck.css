@@ -780,8 +780,8 @@ figcaption {
 }
 
 .journey-figure {
-  height: 122px;
-  margin: auto 0 0;
+  height: 180px;
+  margin: 29px 0 0;
   border: 1px solid #5f5c5b;
   background: #f7f7f2;
   overflow: hidden;
@@ -790,7 +790,7 @@ figcaption {
 .journey-figure img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .role-zone {
