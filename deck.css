@@ -437,7 +437,9 @@ figcaption {
 }
 
 .slide[data-slide-id="slide-07"] .bottom-note {
-  bottom: 92px;
+  left: 87px;
+  right: 89px;
+  bottom: 114px;
 }
 
 .editorial-grid.three {
