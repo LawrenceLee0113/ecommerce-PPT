@@ -432,6 +432,14 @@ figcaption {
   grid-template-columns: repeat(2, 1fr);
 }
 
+.slide[data-slide-id="slide-07"] .editorial-grid.four {
+  bottom: 200px;
+}
+
+.slide[data-slide-id="slide-07"] .bottom-note {
+  bottom: 92px;
+}
+
 .editorial-grid.three {
   grid-template-columns: repeat(3, 1fr);
 }

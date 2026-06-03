@@ -93,14 +93,14 @@
 
       <section class="slide grid-slide" data-slide-id="slide-07" aria-hidden="true">
         <div class="top-bar"><span class="top-label">STP 01 SEGMENTATION</span></div>
-        <div class="title-band"><h2 data-ai-id="slide-07-title" data-ai-role="title">市場區隔：找出需求相似的顧客群</h2></div>
+        <div class="title-band"><h2 data-ai-id="slide-07-title" data-ai-role="title">3D 列印目前最常使用的人群</h2></div>
         <div class="editorial-grid four" data-ai-id="slide-07-grid" data-ai-role="group">
-          <article><span>人口特性</span><h3>學生與年輕工作者</h3><p>熟悉網購、願意嘗試新服務，對價格與便利性敏感。</p></article>
-          <article><span>地理位置</span><h3>都市與校園商圈</h3><p>超商密度高，取件便利，適合先做服務試點。</p></article>
-          <article><span>心理特性</span><h3>喜歡 DIY 與客製化</h3><p>重視獨特性、解決問題與參與感。</p></article>
-          <article><span>產品行為</span><h3>小量、臨時、非標準</h3><p>需求不穩定，但願意為快速取得合適物件付費。</p></article>
+          <article><span>01</span><h3>設計師與產品開發者</h3><p>利用 3D 列印快速製作產品原型，確認外觀與尺寸，降低開發成本。</p><strong>工業設計、機構設計、商品開發</strong></article>
+          <article><span>02</span><h3>Maker 與創作者</h3><p>喜歡自己製作物品，常用於模型、公仔、Cosplay 道具、DIY 零件與機械結構。</p><strong>通常能接受較高學習成本</strong></article>
+          <article><span>03</span><h3>學校與教育單位</h3><p>用 3D 列印支援 STEM、工程教學、創意課程與科學模型。</p><strong>把抽象概念轉成可觸摸的實體</strong></article>
+          <article><span>04</span><h3>工程與維修人員</h3><p>自行列印特殊零件、固定架、工具配件或停產零件替代品。</p><strong>節省等待時間與維修成本</strong></article>
         </div>
-        <p class="bottom-note" data-ai-id="slide-07-note">好的區隔：組內同質、組間異質，才方便設計不同訊息與服務方案。</p>
+        <p class="bottom-note" data-ai-id="slide-07-note">共同特徵：多半有專業或創作需求；機器價格、維護成本、學習門檻與低頻使用，讓更多有需求者仍停留在潛在使用者。</p>
         <footer class="footer"><div class="footer-left"><span class="page-number">07</span><span class="footer-text">SEGMENTATION</span></div><span class="footer-text">SMART 3D PRINT SERVICE</span></footer>
       </section>
 
@@ -301,7 +301,8 @@
       });
 
       fitDeck();
-      showSlide(0);
+      const initialSlide = Number.parseInt(params.get("slide") || "1", 10);
+      showSlide(Number.isFinite(initialSlide) ? initialSlide - 1 : 0);
       setControlsPinned(true);
     </script>
     <script src="./ai-slide-adjuster/core.js"></script>
