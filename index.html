@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>超商型智慧 3D 列印電商企劃｜Editorial Edition</title>
     <link rel="icon" href="data:," />
-    <link rel="stylesheet" href="./assets/fonts/cover-fonts.css" />
+    <link rel="stylesheet" href="./assets/fonts/deck-fonts.css" />
     <link rel="stylesheet" href="./deck.css" />
   </head>
   <body>
@@ -240,15 +240,9 @@
       const slideCount = document.querySelector("#slideCount");
       const deckControls = document.querySelector(".deck-controls");
       const pinControlsBtn = document.querySelector("#pinControlsBtn");
-      const coverFonts = new Set(["noto-serif", "chiron-sung", "ibm-plex", "noto-sans", "lxgw-wenkai"]);
       const params = new URLSearchParams(window.location.search);
-      const coverFont = params.get("coverFont");
       let current = 0;
       let controlsPinned = true;
-
-      if (coverFonts.has(coverFont)) {
-        document.documentElement.dataset.coverFont = coverFont;
-      }
 
       if (params.get("preview") === "clean") {
         document.documentElement.dataset.preview = "clean";

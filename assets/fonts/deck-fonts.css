@@ -1,0 +1,36 @@
+/* Local deck font. */
+
+@page {
+  size: 16in 9in;
+  margin: 0;
+}
+
+@media print {
+  *,
+  *::before,
+  *::after {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  .deck .slide:last-of-type {
+    break-after: auto;
+    page-break-after: auto;
+  }
+}
+
+@font-face {
+  font-family: 'LXGW WenKai TC Local';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('./lxgw-wenkai-tc-300.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'LXGW WenKai TC Local';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./lxgw-wenkai-tc-400.ttf') format('truetype');
+}

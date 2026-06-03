@@ -13,32 +13,7 @@ body {
   overflow: hidden;
   background: #e6e1dc;
   color: #3f3f3e;
-  font-family: "Noto Sans TC", "Microsoft JhengHei", "Helvetica Neue", Arial, sans-serif;
-}
-
-html[data-cover-font="noto-serif"] .cover-slide {
-  --cover-preview-font: "Noto Serif TC Cover", "Noto Serif TC", serif;
-}
-
-html[data-cover-font="chiron-sung"] .cover-slide {
-  --cover-preview-font: "Chiron Sung HK Cover", "Noto Serif TC", serif;
-}
-
-html[data-cover-font="ibm-plex"] .cover-slide {
-  --cover-preview-font: "IBM Plex Sans TC Cover", "Noto Sans TC", sans-serif;
-}
-
-html[data-cover-font="noto-sans"] .cover-slide {
-  --cover-preview-font: "Noto Sans TC Cover", "Noto Sans TC", sans-serif;
-}
-
-html[data-cover-font="lxgw-wenkai"] .cover-slide {
-  --cover-preview-font: "LXGW WenKai TC Cover", "Noto Sans TC", sans-serif;
-}
-
-html[data-cover-font] .cover-slide .cover-content,
-html[data-cover-font] .cover-slide .footer {
-  font-family: var(--cover-preview-font);
+  font-family: "LXGW WenKai TC Local", "LXGW WenKai TC", "Microsoft JhengHei", "Helvetica Neue", Arial, sans-serif;
 }
 
 html[data-preview="clean"] .deck-controls {
