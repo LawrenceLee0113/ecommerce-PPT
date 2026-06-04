@@ -880,35 +880,33 @@ figcaption {
 }
 
 .process-labels .p1 {
-  left: 50%;
-  top: 12px;
-  transform: translateX(-50%);
+  left: 129px;
+  top: 5px;
 }
 
 .process-labels .p2 {
-  right: 20px;
-  top: 54px;
+  left: 276px;
+  top: 22px;
 }
 
 .process-labels .p3 {
-  right: 22px;
-  bottom: 48px;
+  left: 326px;
+  top: 146px;
 }
 
 .process-labels .p4 {
-  left: 50%;
-  bottom: 12px;
-  transform: translateX(-50%);
+  left: 233px;
+  top: 212px;
 }
 
 .process-labels .p5 {
-  left: 22px;
-  bottom: 48px;
+  left: 80px;
+  top: 205px;
 }
 
 .process-labels .p6 {
-  left: 20px;
-  top: 54px;
+  left: 19px;
+  top: 157px;
 }
 
 .journey {
