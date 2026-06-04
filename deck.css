@@ -845,13 +845,11 @@ figcaption {
 .service-card-grid .service-people-composite {
   display: grid;
   grid-template-rows: repeat(2, minmax(0, 1fr));
-  gap: 8px;
-  padding: 8px;
+  gap: 0;
 }
 
 .service-card-grid .service-people-composite img {
   min-height: 0;
-  border: 1px solid #5f5c5b;
 }
 
 .service-card-grid span {
@@ -873,8 +871,7 @@ figcaption {
 }
 
 .service-process-figure img {
-  object-fit: contain;
-  padding: 10px;
+  object-fit: cover;
 }
 
 .process-labels b {
