@@ -777,10 +777,23 @@ figcaption {
 }
 
 .promotion-audience article {
+  position: relative;
+  overflow: hidden;
   min-height: 190px;
-  padding: 28px 34px;
+  padding: 28px 168px 28px 34px;
   border-right: 1px solid #5f5c5b;
   border-bottom: 1px solid #5f5c5b;
+}
+
+.promotion-audience .promotion-spot-image {
+  position: absolute;
+  right: -18px;
+  bottom: -18px;
+  width: 138px;
+  height: 138px;
+  border: 1px solid #5f5c5b;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .promotion-audience span,
@@ -814,10 +827,23 @@ figcaption {
 }
 
 .promotion-mechanics article {
+  position: relative;
+  overflow: hidden;
   min-height: 154px;
-  padding: 24px 28px;
+  padding: 24px 128px 24px 28px;
   border-right: 1px solid #5f5c5b;
   border-bottom: 1px solid #5f5c5b;
+}
+
+.promotion-mechanics .promotion-spot-image {
+  position: absolute;
+  right: -14px;
+  bottom: -14px;
+  width: 102px;
+  height: 102px;
+  border: 1px solid #5f5c5b;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .promotion-mechanics p {
