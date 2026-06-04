@@ -866,6 +866,7 @@ figcaption {
 
 .process-labels b {
   position: absolute;
+  z-index: 2;
   min-width: 64px;
   padding: 4px 7px;
   border: 1px solid #5f5c5b;
@@ -875,6 +876,7 @@ figcaption {
   font-weight: 300;
   line-height: 1;
   text-align: center;
+  pointer-events: auto;
 }
 
 .process-labels .p1 {
