@@ -541,6 +541,23 @@ figcaption {
   bottom: 200px;
 }
 
+.slide[data-slide-id="slide-07"] .editorial-grid article {
+  position: relative;
+  overflow: hidden;
+  padding-right: 178px;
+}
+
+.slide[data-slide-id="slide-07"] .segment-audience-image {
+  position: absolute;
+  right: -18px;
+  bottom: -18px;
+  width: 150px;
+  height: 150px;
+  border: 1px solid #5f5c5b;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .slide[data-slide-id="slide-07"] .bottom-note {
   left: 87px;
   right: 89px;
