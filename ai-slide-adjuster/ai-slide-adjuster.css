@@ -219,6 +219,7 @@
   padding: 0;
   background: transparent;
   color: var(--asa-relation-color, #2563eb);
+  cursor: move;
   pointer-events: auto;
   z-index: 2;
 }
@@ -235,6 +236,7 @@
   stroke: currentColor;
   stroke-width: 3;
   stroke-linecap: round;
+  cursor: move;
 }
 
 .asa-relation-arrow path {

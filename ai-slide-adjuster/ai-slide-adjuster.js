@@ -568,7 +568,7 @@
     }, 60);
   }
 
-  function startRelationDrag(ui, event, targetBox, resize) {
+  function startRelationDrag(ui, event, targetBox, resize, captureElement = targetBox) {
     const relation = state.relations.find((item) => item.id === targetBox.dataset.relationId);
     if (!relation) return;
     event.preventDefault();
@@ -582,7 +582,7 @@
       startY: event.clientY,
       startRect: { left: rect.left, top: rect.top, width: rect.width, height: rect.height },
     };
-    targetBox.setPointerCapture(event.pointerId);
+    captureElement.setPointerCapture(event.pointerId);
     renderRelations(ui);
   }
 
@@ -771,8 +771,17 @@
     ui.relationsLayer.addEventListener("pointerdown", (event) => {
       if (event.target.closest("[data-relation-action]")) return;
       const targetBox = event.target.closest(".asa-relation-target");
-      if (!targetBox) return;
-      startRelationDrag(ui, event, targetBox, Boolean(event.target.closest("[data-resize]")));
+      if (targetBox) {
+        startRelationDrag(ui, event, targetBox, Boolean(event.target.closest("[data-resize]")));
+        return;
+      }
+      const arrow = event.target.closest(".asa-relation-arrow");
+      if (!arrow) return;
+      const arrowTargetBox = Array.from(ui.relationsLayer.querySelectorAll(".asa-relation-target")).find(
+        (box) => box.dataset.relationId === arrow.dataset.relationId,
+      );
+      if (!arrowTargetBox) return;
+      startRelationDrag(ui, event, arrowTargetBox, false, arrow);
     });
 
     window.addEventListener("resize", () => {
